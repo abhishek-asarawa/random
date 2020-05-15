@@ -1,0 +1,37 @@
+Coding Challenge for today -
+ Create an html page from scratch, start in the browser
+ Add html elements to it based on https://getbootstrap.com/docs/4.4/examples/album/ this page
+ Create a CSS file, link it to the html file
+ Add some styles using all the 3 formats we learned
+Assignment for today -
+ Read about html, html files and the different tags html provides you with
+ Read about CSS, and the different properties it gives you
+
+ outline
+ box
+   box
+     icon
+     text
+     button
+   box
+     text
+     text
+     button
+       text
+     button
+       text
+   box
+     box
+       image
+     box
+       text
+       button
+         text
+       button
+         text
+       text
+   box
+     text
+     link
+     link
+     link

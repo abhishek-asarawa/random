@@ -1,0 +1,19 @@
+
+D:\document>mkdir robin
+
+D:\document>mkdir D:\document\robin\ habits_of_a_good_programmer.txt
+
+D:\document>notepad  habits_of_a_good_programmer.txt
+
+D:\document>type  habits_of_a_good_programmer.txt
+1. Share Your Code Publicly as Much as Possible
+2. Use Command-line When Possible
+3. Read Books
+4. Keep Journal
+5. Over Communicate
+6. Always Have an Agenda for Meetings
+7. Learn Touch Typing
+8. Use Best Tools
+9. Avoid Distractions
+10. Know Shortcuts
+D:\document>

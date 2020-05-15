@@ -1,0 +1,12 @@
+fname = input("Enter file name: ") #getting file from user
+word=input("Enter word to be searched:")#getting word to be searched
+k = 0
+#code to count the word. 
+with open(fname, 'r') as f: 
+    for line in f:
+        words = line.split()
+        for i in words:
+            if(i==word):
+                k=k+1
+print("Occurrences of the word:")
+print(k) #printing the count.

@@ -1,0 +1,18 @@
+we learn about using GIT in system. How to intiallise git, add files, commit and log.
+Coding Challenge -
+Create a folder
+Create a file inside it
+Turn this folder into a git repository
+Add a couple of more files to the folder
+Add/Register these files with git
+Create a commit
+Make some changes to any files
+Create another commit
+See a list of those commits
+*Note - You must only use the terminal/shell commands for this, no GUI
+Assignment -
+Learn/Read/Research about the following things in git(commands) -
+1. What does "git init" do?
+2. What is staging in git?
+3. What happens when you create a commit?
+4. What are branches in git? Just learn basics about it

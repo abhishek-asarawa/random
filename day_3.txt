@@ -1,0 +1,5 @@
+today we learn about how to make github account.
+
+ your assignment for today is to learn about the branching structure in git, learn more about pull, push, remote
+Coding challenge is to explore the  .git folder and try to understand what is happening in the folder when you do git add, and commit
+Write down your understandings of the assignment and coding challenge in a text file and keep it with you, you'll push it once your github setup is done :)

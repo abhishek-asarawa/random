@@ -1,0 +1,14 @@
+we learn about the Shell command and about Git.
+Some important functions for terminal/command prompt/powershell.
+What is Git use for.
+assingment
+Today's coding challenge -
+Create a folder in the folder of your choice, named "Robin"
+Create a file name "good_habits_of_a_programmer.txt"
+Add what do you think are good habits for a programmer and save it, and check from the terminal if the content in the file is visible now
+P.S - All this has to be done from the command line itself and not from the GUI(folder structure)
+
+Today's assignment -
+Install GIT in your respective systems
+Install VSCode and learn how to open the terminal and verify the commands we learnt today
+Read/Watch Youtube Videos about what GIT is, keep in mind not GITHUB, but just the concept of GIT

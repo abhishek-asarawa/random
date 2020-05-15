@@ -1,0 +1,14 @@
+# for solving quardic eqaution x^2-5x+6 
+# by formula b^2-4ac/2a
+a = 1
+b = -5
+c = 6
+# first we will check nature of root
+E = b**2-4*a*c
+if (E<0):
+  print("Roots are not real.")
+else:
+  print ("Roots are real.")
+  root_1 = (-b+E**(1/2))/2*a
+  root_2 = (-b-E**(1/2))/2*a
+  print("roots are ",root_1, " and ",root_2)

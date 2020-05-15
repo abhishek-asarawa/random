@@ -1,0 +1,23 @@
+/* div{ */
+    /* border: 2px solid blue; */
+/* */
+/* span{ */
+    /* font-size:30px; */
+    /* color:green; */
+
+/* } */
+p{
+    font-size:40px;
+}
+.buttonclass{
+    color:rgb(29, 8, 46);
+    background-color:yellow;
+    width:100px;
+    height:38px;
+    font-size:15px;
+    font-style:bold;
+}
+#myid{
+    font-size:100px;
+    font-style:italic;
+}
