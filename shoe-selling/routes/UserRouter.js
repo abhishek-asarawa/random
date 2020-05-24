@@ -6,9 +6,6 @@ const uuid = require('uuid').v4;
 const user = express.Router();
 
 
-// console.log(UserDb);
-
-
 user.use(session({
     genid: (req) => uuid(),
     secret: 'abhishek',
@@ -39,18 +36,15 @@ user.post("/register", (req, res) => {
     };
 
     UserDb.push({name, email, username, password});
-    // console.log(UserDB, "in app");
     res.send('user added succesfully');
 });
 
 
 user.post('/login', (req, res) => {
-    // const {UserDb} = require("./index.js");
     let {username, password} = req.body;
     console.log(UserDb, "in user route");
 
     for(let user of UserDb){
-        // console.log(user.username, user.password, user);
         if(user.username === username){
             if(user.password === password ){
                 req.session.username = username;
@@ -68,12 +62,10 @@ user.post('/login', (req, res) => {
 user.get("/sessionDetail", (req, res) =>{
     if(req.session.username){
         res.send(req.session);
-        // res.send(req.session.username);
     } else {
         res.send("No login attempt");
     }
-
-})
+});
 
 
 module.exports = user;

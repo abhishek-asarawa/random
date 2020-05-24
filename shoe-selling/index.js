@@ -1,14 +1,16 @@
 const express = require('express');
 const morgan = require('morgan');
-const userRouter = require('./UserRouter.js');
+const userRouter = require('./routes/UserRouter.js');
 
-
+//instance
 const app = express();
 
-
+// middleware for data
 app.use(morgan('tiny'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
+
+// routes
 app.use('/user', userRouter);
 
 
@@ -21,11 +23,24 @@ app.get("/", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-    res.render("login");
+    let loginFailed = req.query.loginFailed;
+    if(loginFailed){
+        res.render("login", {loginFailed});
+    } else {
+        res.render("login");
+    }
 });
 
 app.get("/register", (req, res) => {
-    res.render("register");
+    let passwordMissmatch = req.query.passwordMissmatch;
+    let userNameExist = req.query.userNameExist;
+    if(req.query.passwordMissmatch){
+        res.render("register", {passwordMissmatch});
+    } else if (userNameExist){
+        res.render("register", {userNameExist});
+    } else {
+        res.render("register");
+    }
 });
 
 
