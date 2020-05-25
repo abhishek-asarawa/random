@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Shoe World</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="offset-md-4 col-md-4">
+                <h2>Add Product</h2>
+                <h3>Register</h3>
+                <hr>
+                {{#if err}}
+                <div class="alert alert-danger">
+                    Oops! All fields necessary and should be fill in there respective formate.
+                </div>
+                {{/if}}
+                <form action="/product/add" method="POST">
+                    <label for="name">
+                        Name:
+                        <input class="form-control" type="text" name="name" id="name">
+                    </label>
+                    <label for="price">
+                        Price:
+                        <input class="form-control" type="text" name="price" id="price">
+                    </label>
+                    <label for="category">
+                        Category:
+                        <input class="form-control" type="text" name="category" id="category">
+                    </label>                    
+                    <label for="quantity">
+                        Quantity:
+                        <input class="form-control" type="text" name="quantity" id="quantity">
+                    </label>
+                    <label for="Dealer">
+                        Dealer:
+                        <input class="form-control" type="text" name="dealer" id="dealer">
+                    </label>
+                    <p></p>
+                    <button class="btn btn-info" type="submit">Add Product</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

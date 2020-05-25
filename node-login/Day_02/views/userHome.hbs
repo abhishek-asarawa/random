@@ -14,6 +14,21 @@
                 <h2>The Shoe World</h2>
                 <h4>Hello {{name}}</h4>
                 <hr>
+                {{#if isAdmin}}
+                <form action="/admin/" method="GET">
+                    <p></p>
+                    <button class="btn btn-info" type="submit">Admin Page</button>
+                </form>
+                <form action="/makeAdmin/" method="GET">
+                    <p></p>
+                    <button class="btn btn-info" type="submit">Make Admin</button>
+                </form>                
+                                
+                {{/if}}
+                <form action="/product/show/?page=1" method="GET">
+                    <p></p>
+                    <button class="btn btn-info" type="submit">Products</button>
+                </form>                
                 <form action="/user/details/{{username}}" method="GET">
                     <p></p>
                     <button class="btn btn-info" type="submit">Your Details</button>
@@ -29,7 +44,7 @@
                 <form action="/user/logout" method="GET">
                     <p></p>
                     <button class="btn btn-info" type="submit">Log out</button>
-                </form>                
+                </form>            
             </div>
         </div>
     </div>

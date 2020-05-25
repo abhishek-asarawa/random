@@ -10,7 +10,11 @@ exports.loginPage = (req, res) => {
             user.find({_id: req.session.userId}, (err, User) => {
                 if(err) return res.status(403).render('err', {err});
                 if(User.length > 0){
-                    res.status(200).render('userHome', {name: User[0].name, username: User[0].username});
+                    let isAdmin = false;
+                    if(User[0].admin){
+                        isAdmin = true;
+                    } 
+                    res.status(200).render('userHome', {name: User[0].name, username: User[0].username, isAdmin});
                 } else {
                     res.status(403).render('login')
                 }
@@ -50,3 +54,22 @@ exports.deletePage = (req, res) => {
 exports.homePage = (req, res) => {
     res.render('home');
 };
+
+
+exports.makeAdminPage = (req, res) => {
+    res.render('makeAdmin');
+};
+
+
+exports.adminPage = (req, res) => {
+    res.render('admin');
+}
+
+
+exports.productAddPage = (req, res) => {
+    if(req.query.err){
+        res.render('addproduct', {err: true});
+    } else {
+        res.render('addproduct');
+    }
+}

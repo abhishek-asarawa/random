@@ -5,15 +5,20 @@ var session = require('express-session');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/userLoginSystem', {useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true}, (err) => {
-  if(err) return console.log(err);
-  console.log('connected..')
-}).catch(err => console.log(err));
+mongoose.connect('mongodb://localhost/userLoginSystem', 
+{
+  useCreateIndex: true, 
+  useUnifiedTopology: true, 
+  useNewUrlParser: true
+})
+.then(() => console.log('Data base is connected'))
+.catch(err => console.log(err));
 
 
 // var indexRouter = require('./routes/index');
 var userRouter = require('./routes/user');
 var normalRouter = require('./routes/normalRoute');
+var productRouter = require('./routes/productRoute');
 
 var app = express();
 
@@ -38,6 +43,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', normalRouter);
 app.use('/user/', userRouter);
+app.use('/product/', productRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -10,6 +10,8 @@ user.post('/edit', userController.update);
 user.get('/delete', userController.delete);
 user.post('/login', userController.login);
 user.get('/logout', userController.logout);
+user.post('/makeAdmin', userController.makeAdmin);
+user.get('/addCart/:id', userController.addCart);
 
 
 module.exports = user;
